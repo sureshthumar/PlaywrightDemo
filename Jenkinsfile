@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout code') {
       steps {
         git branch: 'main',
-            credentialsId: 'your-credentials-id',
+            credentialsId: 'ID',
             url: 'https://github.com/sureshthumar/PlaywrightDemo.git'
       }
     }
