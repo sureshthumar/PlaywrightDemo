@@ -1,8 +1,5 @@
 pipeline {
   agent any
-    tools {
-    git 'Git'
-  }
   stages {
     stage('Checkout code') {
       steps {
@@ -11,7 +8,6 @@ pipeline {
             url: 'https://github.com/sureshthumar/PlaywrightDemo.git'
       }
     }
-  stages {
     stage('Install dependencies') {
       steps {
         sh 'npm install'
@@ -36,3 +32,4 @@ pipeline {
     }
   }
 }
+// This Jenkinsfile defines a pipeline that checks out code from a Git repository, installs dependencies, runs Playwright tests, and uploads the HTML report.
