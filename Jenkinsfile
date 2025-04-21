@@ -4,6 +4,7 @@ pipeline {
       image 'mcr.microsoft.com/playwright:v1.52.0-noble'
     }
   }
+  stages {
     stage('Install dependencies') {
       steps {
         sh 'npm install'
@@ -27,3 +28,4 @@ pipeline {
       }
     }
   }
+}
