@@ -1,5 +1,16 @@
 pipeline {
   agent any
+    tools {
+    git 'Git'
+  }
+  stages {
+    stage('Checkout code') {
+      steps {
+        git branch: 'main',
+            credentialsId: 'your-credentials-id',
+            url: 'https://github.com/sureshthumar/PlaywrightDemo.git'
+      }
+    }
   stages {
     stage('Install dependencies') {
       steps {
