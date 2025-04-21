@@ -1,6 +1,9 @@
 pipeline {
   agent any
   stages {
+    stage('Checkout code') {
+      steps {
+        git branch: 'main', url:'https://github.com/sureshthumar/PlaywrightDemo.git'
     stage('Install dependencies') {
       steps {
         sh 'npm install'
@@ -23,5 +26,8 @@ pipeline {
         ]
       }
     }
+}
+    }
   }
 }
+
